@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "My Extension (Firefox)",
+  "version": "1.0.0",
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "scripts": ["browser-polyfill.js", "background.js"],
+    "type": "module"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "my-extension-name@your-domain.com"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "permissions": [
+    "proxy",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "privacy",
+    "tabs",
+    "<all_urls>"
+  ],
+  "optional_permissions": ["browsingData", "management"],
+  "icons": {
+    "16": "public/Icon16.png",
+    "32": "public/Icon32.png",
+    "48": "public/Icon48.png",
+    "128": "public/Icon128.png"
+  }
+}

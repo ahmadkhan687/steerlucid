@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  min-height: 360px;
+  max-height: 360px;
+  width: 250px;
+  background: #47217e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border: solid;
+  border-radius: 30px;
+}
+
+.circle1 {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+  background: rgba(168, 85, 247, 0.4);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.circle2 {
+  position: absolute;
+  bottom: 60px;
+  right: 30px;
+  width: 120px;
+  height: 120px;
+  background: rgba(99, 102, 241, 0.4);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.circle3 {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 60px;
+  height: 60px;
+  background: rgba(192, 132, 252, 0.2);
+  border-radius: 50%;
+  filter: blur(30px);
+}
+
+.login-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  z-index: 1;
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo-icon {
+  width: 48px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 4px 12px rgba(76, 29, 149, 0.4);
+}
+
+.logo h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: white;
+}
+
+.logo p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+.form-group label {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+  color: white;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: #9ca3af;
+}
+
+.form-control {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-control:focus {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  outline: none;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.form-options a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 8px;
+  font-size: 10px;
+  cursor: pointer;
+  font-weight: 300;
+  transition: all 0.3s;
+}
+
+.btn-login:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 28px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.divider span {
+  padding: 0 16px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.social-login {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-social {
+  flex: 1;
+  padding: 14px;
+  border: 2px solid #e5e7eb;
+  background: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.signup-prompt {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  margin-top: 12px;
+}
+.signup-prompt a {
+  color: #11cc4b;
+  font-weight: 500;
+}

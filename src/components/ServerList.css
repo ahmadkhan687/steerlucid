@@ -1,0 +1,229 @@
+.server-list-container {
+  min-height: 360px;
+  max-height: 360px;
+  width: 250px;
+  background: #47217e;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border: solid;
+  border-radius: 30px;
+}
+
+.circle1 {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+  background: rgba(168, 85, 247, 0.4);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.circle2 {
+  position: absolute;
+  bottom: 60px;
+  right: 30px;
+  width: 120px;
+  height: 120px;
+  background: rgba(99, 102, 241, 0.4);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.circle3 {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 60px;
+  height: 60px;
+  background: rgba(192, 132, 252, 0.2);
+  border-radius: 50%;
+  filter: blur(30px);
+}
+
+.server-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 10;
+  position: relative;
+}
+
+.back-button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 4px 8px;
+  color: white;
+  font-size: 10px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-2px);
+}
+
+.server-list-title {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.search-container {
+  position: relative;
+  padding: 16px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 10px 16px 10px 40px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.server-list-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 12px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  position: relative;
+  z-index: 10;
+}
+
+.server-list-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.server-list-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.server-list-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.server-list-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.server-item {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: left;
+}
+
+.server-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(4px);
+}
+
+.server-item.selected {
+  background: rgba(17, 204, 75, 0.15);
+  border-color: rgba(17, 204, 75, 0.4);
+  box-shadow: 0 0 20px rgba(17, 204, 75, 0.2);
+}
+
+.server-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.server-flag {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.server-flag-image {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.server-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.server-name {
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.server-city {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.server-check {
+  color: #11cc4b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
